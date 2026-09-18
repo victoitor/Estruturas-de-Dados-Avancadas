@@ -1,7 +1,7 @@
 # Estruturas de Dados
 Repositório base para os trabalhos da disciplina de Estruturas de Dados Avançadas (CK0126)/Estruturas de Dados (CKP8077).
 Cada pasta contém a especificação de um trabalho e casos de teste.
-Você pode clonar esse repositório utilizando ```gh repo clone nogrodrigo/Estruturas-de-Dados```.
+Você pode clonar esse repositório utilizando ```git clone <endereço https do repositório>```.
 
 ## Grupos
 
