@@ -22,7 +22,7 @@ O envio de todos os trabalhos deve conter:
   - Descrição de cada função e estrutura (como ```struct``` em ```C``` ou ```class``` em ```Java```) que são usadas no código
   - Em quais arquivos cada função e estrutura estão
 
-### Exemplo de ```makefile```
+### Exemplo de ```Makefile```
 ```makefile
 INPUT = entrada.txt
 
