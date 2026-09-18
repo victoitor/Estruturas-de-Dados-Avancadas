@@ -1,4 +1,4 @@
-# Estruturas de Dados
+# Estruturas de Dados Avançadas
 Repositório base para os trabalhos da disciplina de Estruturas de Dados Avançadas (CK0126)/Estruturas de Dados (CKP8077).
 Cada pasta contém a especificação de um trabalho e casos de teste.
 Você pode clonar esse repositório utilizando 
