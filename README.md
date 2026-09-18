@@ -19,7 +19,6 @@ O envio de todos os trabalhos deve conter:
   - O comando ```run``` deve ser capaz de receber um argumento que é o caminho para um arquivo ```.txt``` para ser utilizado como entrada do programa
 - Um arquivo ```README.md``` com a descrição do seu trabalho, que deve indicar
   - A linguagem de programação usada (incluindo a versão)
-  - Instruções de como executar o programa
   - Descrição de cada função e estrutura (como ```struct``` em ```C``` ou ```class``` em ```Java```) que são usadas no código
   - Em quais arquivos cada função e estrutura estão
 
