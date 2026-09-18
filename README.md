@@ -14,7 +14,7 @@ git clone https://github.com/victoitor/Estruturas-de-Dados-Avancadas.git
 ## Envio
 O envio de todos os trabalhos deve conter:
 - O código-fonte
-- Um arquivo ```makefile``` que possua as funcionalidades ```build``` para compilar e ```run``` para executar o programa
+- Um arquivo ```Makefile``` que possua as funcionalidades ```build``` para compilar e ```run``` para rodar o programa
   - Lembre-se que o programa deve receber um arquivo de texto ```.txt``` como entrada
   - O comando ```run``` deve ser capaz de receber um argumento que é o caminho para um arquivo ```.txt``` para ser utilizado como entrada do programa
 - Um arquivo ```README.md``` com a descrição do seu trabalho, que deve indicar
