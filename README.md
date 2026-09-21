@@ -29,7 +29,7 @@ INPUT = entrada.txt
 build: main.cpp
   g++ -o programa main.cpp
 
-run: programa.exe
+run:
   ./programa $(INPUT)
   ```
 
