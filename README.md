@@ -51,7 +51,7 @@ Se você quiser utilizar um arquivo com outro nome, como ```entrada2.txt```, bas
 
 ## Entrada e saída
 
-O arquivo ```README.md``` deve indicar como a entrada é recebida (input do usuário, arquivo de texto passado como argumento, etc.).
+A entrada **precisa** ser lida pelo comando ```make run```, utilizando um argumento com o nome do arquivo a ser lido, como no exemplo acima.
 A saída **precisa** ser impressa no terminal.
 
 ## Testes
