@@ -49,6 +49,11 @@ Por padrão, definimos ele como ```entrada.txt```.
 Se executarmos apenas o comando ```make run```, ele executará a linha 7 substituindo ```$(INPUT)``` pela string salva nele e, com isso, executará ```programa``` passando o arquivo ```entrada.txt``` como argumento (se ele existir no diretório).
 Se você quiser utilizar um arquivo com outro nome, como ```entrada2.txt```, basta executar o comando ```make run INPUT=entrada2.txt``` para atribuir outra string à variável ```INPUT``` antes do comando ser executado.
 
+## Entrada e saída
+
+O arquivo ```README.md``` deve indicar como a entrada é recebida (input do usuário, arquivo de texto passado como argumento, etc.).
+A saída **precisa** ser impressa no terminal.
+
 ## Testes
 
 Parte da nota dos trabalhos vêm do comportamento do seu programa com algumas entradas de teste.
