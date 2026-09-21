@@ -14,15 +14,15 @@ git clone https://github.com/victoitor/Estruturas-de-Dados-Avancadas.git
 ## Envio
 O envio de todos os trabalhos deve conter:
 - O código-fonte
-- Um arquivo ```Makefile``` que possua as funcionalidades ```build``` para compilar e ```run``` para rodar o programa
-  - Lembre-se que o programa deve receber um arquivo de texto ```.txt``` como entrada
-  - O comando ```run``` deve ser capaz de receber um argumento que é o caminho para um arquivo ```.txt``` para ser utilizado como entrada do programa
-- Um arquivo ```README.md``` com a descrição do seu trabalho, que deve indicar
+- Um arquivo [`Makefile`](https://www.gnu.org/software/make/manual/make.html) que possua as regras `build` para compilar e `run` para rodar o programa
+  - O `run` deve ser capaz de ler um arquivo `.txt` fornecido pela variável `INPUT` que será a entrada do programa.
+  - Estes comandos devem rodar no Linux.
+- Um arquivo `README.md` com a descrição do seu trabalho, que deve indicar
   - A linguagem de programação usada (incluindo a versão)
-  - Descrição de cada função e estrutura (como ```struct``` em ```C``` ou ```class``` em ```Java```) que são usadas no código
+  - Descrição de cada função e estrutura (como `struct` em `C` ou `class` em `Java`) que são usadas no código
   - Em quais arquivos cada função e estrutura estão
 
-### Exemplo de ```Makefile```
+### Exemplo de `Makefile`
 ```makefile
 INPUT = entrada.txt
 
@@ -31,28 +31,22 @@ build: main.cpp
 
 run:
   ./programa $(INPUT)
-  ```
+```
 
-Aqui temos dois comandos: ```build``` e ```run```.
+Aqui temos dois comandos: `build` e `run`.
 
-O comando ```make build``` irá executar a linha 4.
-Ele irá compilar o conteúdo do arquivo ```main.cpp``` que contém o código fonte no arquivo executável ```programa.exe```.
-Ele precisa que o arquivo ```main.cpp``` exista no mesmo diretório que o arquivo ```makefile```, por isso está sendo especificado depois dos dois pontos na linha 3.
-Se o arquivo ```main.cpp``` estivesse dentro de uma subpasta ```src/```, por exemplo, a linha 3 mudaria para ```build: src/main.cpp``` e a linha 4 mudaria para ```g++ -o programa src/main.cpp``` (embora o ideal fosse criar variáveis pra cuidar disso).
+- O comando `make build` compila o conteúdo do arquivo `main.cpp` usando o compilador `g++` e cria o programa executável `programa` como saída.
+- O comando `make run` coloca `programa` para rodar passando como entrada o arquivo fornecido pela variável `INPUT`.
 
-O comando ```make run```irá executar a linha 7.
-Ele precisa que o arquivo ```programa``` exista dentro do diretório (então precisa ser executado *depois* do ```build```).
-Se você salvou o executável ```programa``` na subpasta ```out/```, você também precisa colocar o prefixo ```out/``` antes de ```programa``` nas linhas 6 e 7, assim como no parágrafo anterior.
-
-O ```INPUT``` é uma variável definida dentro do arquivo ```makefile```.
-Por padrão, definimos ele como ```entrada.txt```.
-Se executarmos apenas o comando ```make run```, ele executará a linha 7 substituindo ```$(INPUT)``` pela string salva nele e, com isso, executará ```programa``` passando o arquivo ```entrada.txt``` como argumento (se ele existir no diretório).
-Se você quiser utilizar um arquivo com outro nome, como ```entrada2.txt```, basta executar o comando ```make run INPUT=entrada2.txt``` para atribuir outra string à variável ```INPUT``` antes do comando ser executado.
+Se você quiser utilizar outro arquivo de entrada, como `entrada2.txt`, basta redefinir a variável como a seguir.
+```
+make run INPUT=entrada2.txt
+```
 
 ## Entrada e saída
 
-A entrada **precisa** ser lida pelo comando ```make run```, utilizando um argumento com o nome do arquivo a ser lido, como no exemplo acima.
-A saída **precisa** ser impressa no terminal.
+- A entrada **precisa** ler o arquivo fornecido na variável `INPUT` do `Makefile` ao rodar seu programa com ```make run```, como no exemplo acima.
+- A saída **precisa** ser impressa no terminal.
 
 ## Testes
 
