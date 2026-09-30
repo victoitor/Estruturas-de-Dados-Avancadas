@@ -1,16 +1,25 @@
 # Persistência Parcial
 
 O objetivo do trabalho é implementar uma estrutura de dados que suporta persistência parcial seguindo o método descrito em sala.
-A sua implementação **não pode** fazer uma cópia inteira da estrutura a cada modificação.
 
-Equipes da graduação devem implementar uma lista duplamente encadeada ordenada com persistência parcial.
-Equipes da pós-graduação devem implementar uma árvore binária de busca com persistência parcial (**não** precisa ser auto-balanceável, como as árvores AVL ou rubro-negras).
+- A complexidade de uma operação em qualquer versão deve ter um custo adicional multiplicativo de `O(1)`.
+- Se sua estrutura tem `v` versões, o espaço total utilizado deve ser `O(v)`.
+
+Cada nó da sua estrutura deve armazenar um valor inteiro não negativo com pelo menos 16 bits e valores repetidos são permitidos.
+
+## Graduação
+
+Implementar uma lista encadeada ordenada.
+
+## Pós-graduação
+
+Implementar uma árvore binária de busca. **Não** precisa ser auto-balanceável, como árvores AVL ou rubro-negras.
 
 ## Operações
 
 As estruturas devem suportar as seguintes operações:
 
-- **Inclusão:** Uma operação de inclusão será identificada por uma linha como ```INC N```.
+- **Inclusão:** Uma operação de inclusão será identificada por uma linha como `INC N`.
 Isto significa que um elemento com chave N deve ser incluído na estrutura e uma nova versão criada.
 Se a chave já estiver presente ela deve ser adicionada novamente.
 

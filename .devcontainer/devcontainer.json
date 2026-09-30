@@ -1,0 +1,38 @@
+{
+  "name": "Debian Stable with incus/ansible/terraform",
+	"build": {
+		"dockerfile": "Containerfile"
+	},
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "installZsh": false,
+      "installOhMyZsh": false,
+      "installOhMyZshConfig": false
+    },
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
+      "packages": "make"
+    },
+    "ghcr.io/eitsupi/devcontainer-features/jujutsu-cli:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "github.vscode-pull-request-github",
+        "esbenp.prettier-vscode"
+      ],
+      "vscode": {
+        "settings": {
+          "editor.formatOnSave": true,
+          "terminal.integrated.suggest.enabled": false,
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
+        }
+      }
+    }
+  },
+  // "securityOpt": ["label=disable"],
+  // "remoteEnv": {
+  //   "PODMAN_USERNS": "keep-id",
+  // },
+  "remoteUser": "dev"
+}

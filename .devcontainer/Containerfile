@@ -1,0 +1,12 @@
+# [Choice] Debian version
+ARG VARIANT="trixie"
+FROM debian:${VARIANT}
+
+# Set locale so Unicode characters render correctly in locale-aware tools (e.g. tmux).
+ENV LANG=C.UTF-8
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN --mount=type=bind,source=scripts/,target=/tmp/scripts/ \
+    bash /tmp/scripts/00-update-upgrade.sh; \
+    bash /tmp/scripts/60-cleanup.sh
