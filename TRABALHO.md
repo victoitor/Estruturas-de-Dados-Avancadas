@@ -24,56 +24,65 @@ Isto significa que um elemento com chave N deve ser incluído na estrutura e uma
 Se a chave já estiver presente ela deve ser adicionada novamente.
 
 Exemplo de linha de inclusão:
+```
+INC 80
+```
 
-```INC 13```
-
-- **Remoção:** Uma operação de remoção será identificada por uma linha como ```REM N```.
+- **Remoção:** Uma operação de remoção será identificada por uma linha como `REM N`.
 Um elemento com este valor deve ser removido (apenas um se houver repetição).
 Caso não haja um nó com o valor especificado, a estrutura não deve ser alterada.
-Em ambos os casos uma nova versão deve ser criada.
+Em ambos os casos uma nova versão deve ser criada, identica à versão anterior.
 
 Exemplo de linha de remoção:
 
-```REM 17```
+```
+REM 17
+```
 
-- **Sucessor:** Uma operação de sucessor será identificada por uma linha como ```SUC N M```.
+- **Sucessor:** Uma operação de sucessor será identificada por uma linha como `SUC N M`.
 A linha de entrada deve ser impressa e, em seguida, a chave com menor valor que é estritamente maior que ```N``` na versão ```M``` da estrutura deve ser impressa uma linha abaixo.
-Não é necessário existir um elemento com chave ```N``` na estrutura para que a operação de sucessor seja feita.
-Se não houver nenhum elemento na estrutura com chave estritamente maior que ```N```, o resultado deve ser ```inf```
-Essa operação não deve criar uma nova versão na estrutura.
+Não é necessário existir um elemento com chave `N` na estrutura para que a operação de sucessor seja feita.
+Se não houver nenhum elemento na estrutura com chave estritamente maior que `N`, o resultado deve ser `inf`.
 
 Exemplo de linha de sucessor:
 
-```SUC 2 20```
+```
+SUC 2 20
+```
 
 Exemplo dessa linha na impressão de saída:
 
 ```
 SUC 2 20
-3
+5
 ```
 
-- **Imprimir:** Uma operação de impressão será identificada por uma linha como ```IMP M```.
-A linha de entrada deve ser impressa e, em seguida, os elementos da estrutura na versão ```M``` devem ser impressos na linha abaixo em ordem crescente, separados por vírgula e espaço.
+- **Imprimir:** Uma operação de impressão será identificada por uma linha como `IMP M`.
+A linha de entrada deve ser impressa e, em seguida, os elementos da estrutura na versão `M` devem ser impressos na linha abaixo em ordem crescente, separados por vírgula e espaço.
 Caso a versão fornecida não exista, a impressão deve ocorrer na versão mais recente.
 Caso a estrutura esteja vazia na versão em questão, o resultado da impressão deve ser uma linha em branco.
 Essa operação não deve criar uma nova versão na estrutura.
 
 Exemplo de linha de impressão:
 
-```IMP 20```
+```
+IMP 20
+```
 
 Exemplo dessa linha na impressão de saída:
 
 ```
 IMP 20
-1, 3, 5, 7, 9
+1, 5, 13, 16, 21, 42, 50, 65, 80, 100
 ```
 
 ## Versões
 
-A estrutura deve começar na versão 0.
-Cada operação de inclusão e remoção aumenta a versão da estrutura em 1.
-Haverá no máximo 99 operações de inclusão e remoção, de modo que haverá no máximo 100 versões diferentes da estrutura, então os identificadores das versões (raiz da estrutura e em quais versões ela opera) podem ser guardados num vetor de tamanho 100.
-Não há limite para o número de operações de sucessor e de impressão, mas estas não criam novas versões.
-Sua estrutura de dados pode criar "versões parciais" para modificações que ocorrem entre versões (uma única inserção pode ocasionar mais de uma modificação na estrutura durante as atualizações, então tenha o cuidado de marcar quais modificações interessam para a entrada).
+- A estrutura (vazia) deve começar na versão 0.
+- Cada operação de inclusão e remoção aumenta a versão da estrutura em 1.
+  - Operações de remoção que não removem nenhum elemento ainda aumentam a versão em 1.
+- Haverá no máximo 1000 operações de inclusão e/ou remoção.
+  - No máximo 1001 versões diferentes da estrutura precisam ser armazenadas.
+  - Identificadores das versões (raiz da estrutura e em quais versões ela opera) podem ser guardados num vetor de tamanho 1001.
+- Não há limite para o número de operações de sucessor e de impressão, mas estas não criam novas versões.
+- Sua estrutura de dados pode criar "versões parciais" para modificações que ocorrem entre versões (uma única inserção pode ocasionar mais de uma modificação na estrutura durante as atualizações, então tenha o cuidado de marcar quais modificações interessam para a entrada).
