@@ -9,7 +9,8 @@ Fulano (matrícula 123456) e Cicrano (matrícula 654321)
 - **Linguagem de programação utilizada:** C++ 26
 - **Estruturas:**
   - **Node:**
-    - Definida em ```Node.hpp``` e implementada em ```Node.cpp```
+    - Definida em `Node.hpp` e implementada em `Node.cpp`
+    - Estrutura do nó é `struct no_persistente`
     - Guarda a informação de um nó da árvore binária de busca persistente
     - O campo ```chave``` corresponde a...
     - O campo ```mods[]``` corresponde a...
