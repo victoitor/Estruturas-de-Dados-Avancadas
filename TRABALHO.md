@@ -85,4 +85,6 @@ IMP 20
   - No máximo 1001 versões diferentes da estrutura precisam ser armazenadas.
   - Identificadores das versões (contendo a raiz da estrutura e qualquer outra informação que você precisar) podem ser guardados num vetor de tamanho 1001.
 - Não há limite para o número de operações de sucessor e de impressão, mas estas não criam novas versões.
-- Sua estrutura de dados pode criar "versões parciais" para modificações que ocorrem entre versões esperadas pelo arquivo de entrada, ou seja, uma única inserção pode ocasionar mais de uma modificação de campo na sua estrutura durante as atualizações. Então tenha o cuidado de marcar quais modificações interessam para a entrada.
+- Sua estrutura de dados pode criar "_versões parciais_" para operações de inclusão ou remoção.
+  - Uma única inserção pode ocasionar mais de uma modificação de campo na sua estrutura.
+  - Tenha o cuidado de separar identificadores de versão internos à sua estrutura de identificadores de versão usados no arquivo de entrada.
