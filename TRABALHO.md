@@ -31,7 +31,7 @@ INC 80
 - **Remoção:** Uma operação de remoção será identificada por uma linha como `REM N`.
 Um elemento com este valor deve ser removido (apenas um se houver repetição).
 Caso não haja um nó com o valor especificado, a estrutura não deve ser alterada.
-Em ambos os casos uma nova versão deve ser criada, identica à versão anterior.
+Em ambos os casos uma nova versão deve ser criada.
 
 Exemplo de linha de remoção:
 
