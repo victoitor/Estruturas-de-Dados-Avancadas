@@ -83,6 +83,6 @@ IMP 20
   - Operações de remoção que não removem nenhum elemento ainda aumentam a versão em 1.
 - Haverá no máximo 1000 operações de inclusão e/ou remoção.
   - No máximo 1001 versões diferentes da estrutura precisam ser armazenadas.
-  - Identificadores das versões (raiz da estrutura e em quais versões ela opera) podem ser guardados num vetor de tamanho 1001.
+  - Identificadores das versões (contendo a raiz da estrutura) podem ser guardados num vetor de tamanho 1001.
 - Não há limite para o número de operações de sucessor e de impressão, mas estas não criam novas versões.
 - Sua estrutura de dados pode criar "versões parciais" para modificações que ocorrem entre versões (uma única inserção pode ocasionar mais de uma modificação na estrutura durante as atualizações, então tenha o cuidado de marcar quais modificações interessam para a entrada).
