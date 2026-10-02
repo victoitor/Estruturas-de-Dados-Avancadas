@@ -2,7 +2,7 @@
 
 O objetivo do trabalho é implementar uma estrutura de dados que suporta persistência parcial seguindo o método descrito em sala.
 
-- A complexidade de uma operação em qualquer versão deve ter um custo adicional multiplicativo de `O(1)`.
+- A complexidade de uma operação em qualquer versão deve ter um custo adicional multiplicativo de `O(1)` amortizado.
 - Se sua estrutura tem `v` versões, o espaço total utilizado deve ser `O(v)`.
 
 Cada nó da sua estrutura deve armazenar um valor inteiro não negativo com pelo menos 16 bits e valores repetidos são permitidos.
