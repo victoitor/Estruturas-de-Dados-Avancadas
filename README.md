@@ -1,7 +1,9 @@
-# Estruturas de Dados Avançadas 2026.2 - Trabalho 01
+# Estruturas de Dados Avançadas 2026.2 - Trabalho de persistência
 
-Repositório base para os trabalhos da disciplina de Estruturas de Dados Avançadas (CK0126)/Estruturas de Dados (CKP8077).
-Cada pasta contém a especificação de um trabalho e casos de teste.
+Repositório base para o trabalho de persistência da disciplina de Estruturas de Dados Avançadas (CK0126)/Estruturas de Dados (CKP8077).
+Este arquivo contém informações gerais sobre a organização e entrega do trabalho.
+A descrição detalhada deste trabalho está no arquivo [TRABALHO.md](https://github.com/victoitor/Estruturas-de-Dados-Avancadas/blob/main/TRABALHO.md).
+
 Você pode clonar esse repositório utilizando 
 ```
 git clone https://github.com/victoitor/Estruturas-de-Dados-Avancadas.git
